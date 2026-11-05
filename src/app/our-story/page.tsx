@@ -1,70 +1,11 @@
-import type { Metadata } from 'next';
+import type {Metadata} from 'next';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
-import Reveal from '@/components/ui/Reveal';
-import SectionLabel from '@/components/ui/SectionLabel';
-import { siteContent } from '@/data/siteContent';
-
-export const metadata: Metadata = {
-  title: 'Our Story',
-  description: 'A thoughtful introduction to Earth Been Coffee, a London speciality beverage brand.',
-};
-
-export default function StoryPage() {
-  return (
-    <>
-      <section className="inner-hero story-inner-hero">
-        <div className="page-width">
-          <SectionLabel number="01">THE STORY SO FAR</SectionLabel>
-          <div className="inner-hero-grid">
-            <div>
-              <h1>
-                More than
-                <br />
-                a coffee <em>break.</em>
-              </h1>
-            </div>
-            <p className="inner-hero-side">
-              The little everyday rituals have a way of making the biggest difference. This is a
-              space for ours.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="story-feature page-width">
-        <Reveal className="story-feature-art">
-          <img src="/images/slow-morning.webp" alt="Editorial coffee moment with pastry and journal" />
-        </Reveal>
-        <Reveal className="story-feature-copy">
-          <span className="eyebrow">THE FEELING BEHIND THE CUP</span>
-          <h2>{siteContent.story.headline}</h2>
-          <p>{siteContent.story.body}</p>
-          <p>{siteContent.story.second}</p>
-          <Link href="/menu" className="text-arrow">
-            EXPLORE OUR DRINKS <ArrowUpRight size={18} />
-          </Link>
-        </Reveal>
-      </section>
-      <section className="manifesto">
-        <div className="page-width">
-          <SectionLabel number="02" light>
-            WHAT WE WANT TO FEEL LIKE
-          </SectionLabel>
-          <Reveal>
-            <h2>
-              Warm welcomes.
-              <br />
-              <em>Slow moments.</em>
-              <br />
-              Something good in every day.
-            </h2>
-          </Reveal>
-          <p>
-            Provisional brand language — final origin, sourcing and values copy to be supplied from
-            the approved brand deck.
-          </p>
-        </div>
-      </section>
-    </>
-  );
-}
+import {ArrowUpRight} from 'lucide-react';
+import Reveal from '@/components/site/Reveal';
+export const metadata:Metadata={title:'Our Story',description:'Discover the everyday moments and thoughtful rituals behind Earth Been Coffee.'};
+export default function OurStory(){return <>
+ <section className="subhero subhero-story"><div className="container subhero-layout"><div><p className="micro-label">02 / OUR STORY</p><h1>A little pause.<br/>A lot of <em>feeling.</em></h1><p>We think the beautiful things in life are often the smallest. A comforting cup. A smile. A reason to stay five minutes longer.</p></div><div className="subhero-photo"><img src="/images/morning-story.webp" alt="A quiet café moment with a coffee, pastry and notebook"/></div></div></section>
+ <section className="story-main section-pad"><div className="container story-main-grid"><Reveal><img className="story-main-img" src="/images/london-stall.webp" alt="Welcoming coffee counter in warm light" loading="lazy"/></Reveal><Reveal className="story-main-copy" delay={90}><p className="micro-label">THE FEELING BEHIND THE CUP</p><h2 className="display-title">Coffee is just<br/>the <em>beginning.</em></h2><p>There is a little magic in the familiar. The ritual of ordering your favourite drink. The first warm sip. The moment you can finally slow down.</p><p>Earth Been Coffee is built around that feeling. We want every visit to feel like a little moment to look forward to, whatever your day looks like.</p><Link href="/menu" className="inline-arrow">EXPLORE OUR MENU <ArrowUpRight size={19}/></Link></Reveal></div></section>
+ <section className="story-values"><div className="container"><p className="micro-label micro-label--light">WHAT MAKES THE MOMENT</p><h2>It&apos;s always the <em>little things.</em></h2><div className="values-grid"><div><span>01</span><h3>Make time</h3><p>For a slow morning, a catch-up, or a well-earned moment on your own.</p></div><div><span>02</span><h3>Feel at home</h3><p>A warm welcome and the comfort of something familiar.</p></div><div><span>03</span><h3>Savour it</h3><p>The everyday deserves to feel a little extraordinary.</p></div></div></div></section>
+ <section className="story-end section-pad"><div className="container story-end-grid"><Reveal><div><p className="micro-label">HERE&apos;S TO THE NEXT GOOD CUP</p><h2 className="display-title">The best moments<br/>are <em>still brewing.</em></h2><Link className="button button-green" href="/find-us">COME SAY HELLO <ArrowUpRight size={18}/></Link></div></Reveal><Reveal delay={90}><img src="/images/coffee-journal.webp" alt="A cosy coffee table with freshly made drinks" loading="lazy"/></Reveal></div></section>
+ </>}

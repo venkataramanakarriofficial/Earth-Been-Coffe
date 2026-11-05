@@ -1,86 +1,10 @@
-import type { Metadata } from 'next';
+import type {Metadata} from 'next';
 import Link from 'next/link';
-import { ArrowUpRight, Mail, Instagram, MapPin } from 'lucide-react';
-import { siteContent } from '@/data/siteContent';
-import SectionLabel from '@/components/ui/SectionLabel';
-import Reveal from '@/components/ui/Reveal';
-
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Talk to Earth Been Coffee about enquiries, collaborations, partnerships and trading opportunities.',
-};
-
-export default function ContactPage() {
-  return (
-    <>
-      <section className="inner-hero contact-hero">
-        <div className="page-width">
-          <SectionLabel number="01">GOOD THINGS BEGIN HERE</SectionLabel>
-          <div className="inner-hero-grid">
-            <h1>
-              Let&apos;s make
-              <br />
-              something <em>good.</em>
-            </h1>
-            <p className="inner-hero-side">Have a question, an idea or just want to say hi? We&apos;re all ears.</p>
-          </div>
-        </div>
-      </section>
-      <section className="contact-layout page-width">
-        <Reveal className="contact-left">
-          <p className="eyebrow">PULL UP A CHAIR</p>
-          <h2>{siteContent.contact.heading}</h2>
-          <p>{siteContent.contact.intro}</p>
-          <div className="contact-mark" aria-hidden="true">✳</div>
-          <div className="contact-photo-card">
-            <img src="/images/hero-cup.webp" alt="Editorial coffee cup close-up" loading="lazy" />
-          </div>
-        </Reveal>
-        <Reveal className="contact-right">
-          <div className="contact-detail">
-            <Mail size={20} />
-            <div>
-              <span>01 / GENERAL & BUSINESS ENQUIRIES</span>
-              {siteContent.contact.email ? (
-                <a href={`mailto:${siteContent.contact.email}`}>
-                  {siteContent.contact.email} <ArrowUpRight size={18} />
-                </a>
-              ) : (
-                <p>Business email to be provided by the client.</p>
-              )}
-            </div>
-          </div>
-          <div className="contact-detail">
-            <ArrowUpRight size={20} />
-            <div>
-              <span>02 / PARTNERSHIPS & COLLABORATIONS</span>
-              <p>For events, brand partnerships and trading opportunities, please use the approved business email once added.</p>
-            </div>
-          </div>
-          <div className="contact-detail">
-            <Instagram size={20} />
-            <div>
-              <span>03 / SOCIAL</span>
-              {siteContent.contact.instagramUrl ? (
-                <a href={siteContent.contact.instagramUrl} target="_blank" rel="noopener noreferrer">
-                  {siteContent.contact.instagramHandle || 'Instagram'} <ArrowUpRight size={18} />
-                </a>
-              ) : (
-                <p>Verified social links will be added soon.</p>
-              )}
-            </div>
-          </div>
-          <div className="contact-detail">
-            <MapPin size={20} />
-            <div>
-              <span>04 / FIND US</span>
-              <Link href="/find-us">
-                London, UK · Our locations <ArrowUpRight size={18} />
-              </Link>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-    </>
-  );
-}
+import {ArrowUpRight, Mail, MapPin, Heart} from 'lucide-react';
+import {siteContent} from '@/data/siteContent';
+import Reveal from '@/components/site/Reveal';
+export const metadata:Metadata={title:'Contact',description:'Get in touch with Earth Been Coffee about enquiries, conversations and collaborations.'};
+export default function Contact(){return <>
+ <section className="subhero subhero-contact"><div className="container subhero-layout"><div><p className="micro-label">04 / SAY HELLO</p><h1>Let&apos;s make<br/>something <em>good.</em></h1><p>Questions, ideas, collaborations or just a good hello. We&apos;d love to hear from you.</p></div><div className="subhero-photo"><img src="/images/hero-cup.webp" alt="Premium coffee takeaway cup in warm morning light"/></div></div></section>
+ <section className="contact-body section-pad"><div className="container contact-grid"><Reveal><p className="micro-label">WE&apos;RE ALL EARS</p><h2 className="display-title">Every great<br/>conversation<br/>starts <em>somewhere.</em></h2><p>Whether it&apos;s a business enquiry or an idea worth sharing, there&apos;s always room to connect over coffee.</p><div className="contact-flower" aria-hidden="true">✳</div></Reveal><Reveal delay={90}><div className="contact-tile"><Mail size={24}/><span>01 / GET IN TOUCH</span><h3>Say hello.</h3>{siteContent.contact.email?<a href={`mailto:${siteContent.contact.email}`} className="inline-arrow">{siteContent.contact.email} <ArrowUpRight size={18}/></a>:<p>Our official contact email will be shared here soon. Please check back for verified details.</p>}</div><div className="contact-tile"><Heart size={24}/><span>02 / WORK TOGETHER</span><h3>Let&apos;s collaborate.</h3><p>For partnerships and brand conversations, reach out through our verified contact details once available.</p></div><div className="contact-tile"><MapPin size={24}/><span>03 / COME VISIT</span><h3>Find your coffee moment.</h3><p>London, United Kingdom</p><Link href="/find-us" className="inline-arrow">EXPLORE LOCATIONS <ArrowUpRight size={18}/></Link></div></Reveal></div></section>
+ </>}

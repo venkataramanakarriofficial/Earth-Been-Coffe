@@ -1,14 +1,12 @@
 import type { Metadata } from 'next';
-import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { siteContent } from '@/data/siteContent';
+import IntroSequence from '@/components/site/IntroSequence';
+import './globals.css';
 export const metadata: Metadata = {
-  title: { default: 'Earth Been Coffee — London', template: '%s | Earth Been Coffee' },
-  description: 'A London speciality coffee, matcha and premium drinks brand. Explore our story, drinks and locations.',
-  openGraph: { title: 'Earth Been Coffee', description: 'A little earth. A lot of soul.', type: 'website', images: ['/og-image.jpg'] },
-  robots: { index: false, follow: false }, // Remove noindex only after approved content / production URL.
+ title: { default:'Earth Been Coffee | The Good in Every Cup',template:'%s | Earth Been Coffee' },
+ description:'Beautiful coffee, slow moments and something good in every cup. Explore the menu and the feeling behind Earth Been Coffee.',
+ openGraph:{title:'Earth Been Coffee',description:'Come for the coffee. Stay for the feeling.',type:'website',images:['/og-image.jpg']},
+ robots:{index:false,follow:false},
 };
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><Header/><main id="main">{children}</main><Footer/></body></html>;
-}
+export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en"><body id="top"><a className="skip-link" href="#main">Skip to main content</a><IntroSequence/><Header/><main id="main">{children}</main><Footer/></body></html>}
