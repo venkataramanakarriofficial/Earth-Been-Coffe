@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1150" role="img"><defs>
+ <linearGradient id="bg" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#b5ae93"/><stop offset="1" stop-color="#8e987b"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2=".1"><stop stop-color="#ffffff" stop-opacity=".55"/><stop offset=".2" stop-color="#f5f5ec" stop-opacity=".08"/><stop offset=".8" stop-color="#fafaf6" stop-opacity=".08"/><stop offset="1" stop-color="#ffffff" stop-opacity=".65"/></linearGradient>
+ <linearGradient id="cream" x1=".1" y1="0" x2=".9" y2="1"><stop stop-color="#f8e9cb"/><stop offset=".5" stop-color="#e7d6b5"/><stop offset="1" stop-color="#bdaa8c"/></linearGradient>
+ <linearGradient id="green" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#9cae73"/><stop offset=".5" stop-color="#65824e"/><stop offset="1" stop-color="#3f5d37"/></linearGradient>
+ <linearGradient id="coffee" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b8713d"/><stop offset=".45" stop-color="#764327"/><stop offset="1" stop-color="#3e271f"/></linearGradient>
+ <linearGradient id="ceramic" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#fef9ed"/><stop offset=".42" stop-color="#e8dbc4"/><stop offset=".9" stop-color="#b8a68f"/><stop offset="1" stop-color="#e6dbc7"/></linearGradient>
+ <linearGradient id="cocoa" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#935b41"/><stop offset=".4" stop-color="#603c2c"/><stop offset="1" stop-color="#2d1d1b"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="34"/></filter>
+ <filter id="sh"><feGaussianBlur stdDeviation="15"/></filter>
+ <pattern id="grain" width="27" height="27" patternUnits="userSpaceOnUse"><circle cx="4" cy="6" r="1" fill="#ffffff" opacity=".11"/><circle cx="17" cy="19" r=".7" fill="#302f27" opacity=".08"/></pattern>
+ </defs><rect width="1000" height="1150" fill="url(#bg)"/><circle cx="520" cy="465" r="390" fill="#e6d9b5" opacity=".28"/><circle cx="520" cy="465" r="310" fill="none" stroke="#fff9eb" opacity=".23" stroke-width="2"/><rect width="1000" height="1150" fill="url(#grain)"/>
+ <text x="52" y="84" font-size="18" letter-spacing="5" font-family="Arial" font-weight="700" fill="#fff9e7" opacity=".8">EARTH BEEN / 04 / TEA &amp; CHAI</text><text x="940" y="1072" font-size="28" font-family="Georgia" fill="#fff9e8" text-anchor="end" opacity=".6">✳</text><ellipse cx="510" cy="956" rx="270" ry="54" fill="#2f241c" opacity=".26" filter="url(#blur)"/>
+<path d="M702 453 C827 420 835 686 692 700" fill="none" stroke="#d6bb95" stroke-width="72"/>
+<path d="M286 456 Q312 803 386 877 Q517 933 652 873 Q705 783 722 456Z" fill="url(#ceramic)"/>
+<ellipse cx="503" cy="460" rx="214" ry="68" fill="#ebe2ca"/><ellipse cx="504" cy="455" rx="188" ry="47" fill="#905a37"/><ellipse cx="504" cy="450" rx="161" ry="30" fill="#ba7d4d" opacity=".8"/>
+<path d="M391 443 Q520 480 630 437" fill="none" stroke="#e1b885" stroke-width="8" opacity=".6"/>
+<path d="M423 349 Q392 300 430 248 M507 341 Q483 284 521 219 M587 349 Q557 309 589 264" fill="none" stroke="#ece9da" stroke-width="11" opacity=".55" stroke-linecap="round"/>
+<g fill="#435b3f"><path d="M190 895 Q175 720 305 685 Q288 830 190 895Z"/><path d="M195 897 Q173 767 117 748 Q106 837 195 897Z" fill="#6a815c"/></g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 660"><defs>
+<linearGradient id="cup" x1="0" y1="0" x2="1" y2=".25"><stop stop-color="#d4c6ad"/><stop offset=".3" stop-color="#f4e8d4"/><stop offset=".65" stop-color="#e4d5bc"/><stop offset="1" stop-color="#b6a68d"/></linearGradient>
+<linearGradient id="wrap" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#12382a"/><stop offset=".35" stop-color="#26513c"/><stop offset=".75" stop-color="#1d4636"/><stop offset="1" stop-color="#0d2e25"/></linearGradient>
+<linearGradient id="lid" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#0e241e"/><stop offset=".45" stop-color="#325a45"/><stop offset="1" stop-color="#132c22"/></linearGradient>
+<filter id="sh"><feGaussianBlur stdDeviation="23"/></filter></defs>
+<ellipse cx="287" cy="592" rx="155" ry="30" fill="#071b15" opacity=".24" filter="url(#sh)"/>
+<g transform="rotate(-11 270 334)"><path d="M123 152 L407 152 L363 549 Q267 583 173 549Z" fill="url(#cup)"/><path d="M139 300 L392 300 L374 444 Q270 475 157 443Z" fill="url(#wrap)"/><path d="M139 299 Q266 325 391 299" fill="none" stroke="#bdb58a" stroke-opacity=".6"/><path d="M157 446 Q268 470 374 445" stroke="#b4ad86" stroke-width="2" fill="none"/>
+<path d="M159 209 Q163 452 191 516" stroke="#fff" stroke-opacity=".23" stroke-width="9" fill="none"/>
+<ellipse cx="265" cy="159" rx="151" ry="41" fill="#132d24"/><path d="M116 145 Q269 109 413 145 L422 163 Q266 209 111 166Z" fill="url(#lid)"/><ellipse cx="265" cy="134" rx="144" ry="30" fill="#325443"/><ellipse cx="266" cy="133" rx="109" ry="17" fill="#173328"/>
+<text x="268" y="363" text-anchor="middle" font-family="Georgia" font-weight="bold" font-size="48" fill="#fbf4e6">EARTH</text><text x="268" y="417" text-anchor="middle" font-family="Georgia" font-weight="bold" font-size="48" fill="#fbf4e6">BEEN</text><text x="270" y="443" text-anchor="middle" font-family="Arial" font-weight="bold" letter-spacing="7" font-size="17" fill="#faf0da">COFFEE</text></g></svg>

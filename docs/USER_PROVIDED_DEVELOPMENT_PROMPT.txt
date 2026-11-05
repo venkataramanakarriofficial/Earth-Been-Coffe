@@ -1,0 +1,571 @@
+# MASTER WEBSITE DEVELOPMENT PROMPT — EARTH BEEN COFFEE
+
+## ROLE & OBJECTIVE
+
+Act as a world-class creative director, luxury brand website designer, senior frontend architect, 3D web developer and UI/UX specialist.
+
+Your task is to design and develop a complete, production-quality website for **EARTH BEEN COFFEE**, a London speciality coffee brand.
+
+The final website must feel like a premium, custom-designed digital brand experience — not a generic café template, AI-generated dashboard or basic landing page.
+
+**3D interaction inspiration:**
+https://motionsites.ai/3d-websites?prompt=sky-cookie
+
+Use this reference to understand immersive product presentation, visual depth, smooth transitions and sophisticated scroll interactions. Do not copy its branding, assets or implementation.
+
+The client's original brief prioritises editorial design, professional photography, simple navigation, mobile performance and subtle animation. Our proposed 3D experience is a creative enhancement that must respect those requirements and receive client approval.
+
+---
+
+## 1. PROJECT SCOPE
+
+**Project:** Earth Been Coffee Official Website
+
+**Industry:** Speciality coffee, matcha and premium beverages
+
+**Location/Market:** London, United Kingdom
+
+**Website type:** Premium informational brand website with selective interactive 3D experiences.
+
+**Development scope:** Frontend only.
+
+Do not implement unnecessary backend architecture, databases, authentication, shopping carts, online payments, checkout flows or ordering functionality.
+
+The website should:
+
+- Introduce the Earth Been Coffee brand professionally.
+- Showcase speciality coffee and other premium drinks.
+- Communicate the company's brand story and values.
+- Help customers discover stall locations.
+- Support future stalls and seasonal promotions.
+- Provide partnership, collaboration and trading enquiry routes.
+- Work beautifully on mobile, tablet and desktop.
+
+## 2. TECHNOLOGY STACK
+
+Use:
+
+- Next.js with App Router
+- React and TypeScript
+- Tailwind CSS
+- Three.js and React Three Fiber
+- React Three Drei when useful
+- GSAP and ScrollTrigger for carefully controlled animations
+- Lucide React for necessary interface icons
+- Optimised image assets in modern web formats
+
+Use Spline or Blender only if helpful for creating or preparing real 3D assets.
+
+Build using clean, reusable components, maintainable architecture and a responsive, accessible interface.
+
+Avoid installing excessive animation libraries or creating unnecessary dependencies.
+
+The project must run locally and be ready for production deployment.
+
+## 3. BRAND & VISUAL DIRECTION
+
+The approved Earth Been Coffee brand identity takes priority.
+
+Use the existing official logo rather than redesigning or substituting it.
+
+**Brand colour direction:**
+- Deep green
+- Warm cream
+- White
+- Restrained earthy accents
+
+Obtain exact brand colours and typography from the existing brand deck when available.
+
+Visual character:
+
+- Luxury editorial
+- Contemporary and welcoming
+- Organic and sophisticated
+- Refined typography
+- Beautiful product photography
+- Generous whitespace
+- Strong visual hierarchy
+- Professional, memorable composition
+
+Avoid:
+
+- Generic coffee-shop templates
+- Overused rounded cards
+- Repetitive feature grids
+- Excessive gradients
+- Random glowing objects
+- Unnecessary glassmorphism
+- Heavy animations
+- Unreadable text layered over images
+- Generic stock images presented as the client's actual products
+
+Every section should have a clear purpose and distinct visual composition.
+
+## 4. HOMEPAGE — SIGNATURE 3D EXPERIENCE
+
+The homepage is the most important design deliverable.
+
+Design a high-impact, elegant homepage that creates a memorable first impression.
+
+### 4.1 Opening experience
+
+Create a short, tasteful opening transition.
+
+Concept:
+
+1. The page opens with a refined cream or deep-green visual.
+2. The Earth Been Coffee logo appears elegantly.
+3. A realistic, branded takeaway coffee cup is introduced through gentle cinematic motion.
+4. The opening blends smoothly into the main hero.
+
+Do not create a long loading screen or force visitors to watch a non-skippable animation.
+
+Do not make the opening animation repeat on normal navigation.
+
+Respect the user's reduced-motion preferences.
+
+### 4.2 Main hero section
+
+Build an immersive editorial hero containing:
+
+- The official Earth Been Coffee logo.
+- A strong brand headline.
+- Short, elegant supporting text.
+- A featured 3D coffee cup or similarly suitable beverage asset.
+- Clear navigation to the menu and brand story.
+- A subtle scroll indicator.
+
+**Proposed creative concept:**
+
+A high-quality Earth Been Coffee cup rests or floats within a carefully lit studio-style environment. The cup gently rotates and responds subtly to scroll progression. A few coffee beans or soft shadows may provide depth.
+
+The hero background should remain clean and uncluttered.
+
+The headline should look beautiful on desktop and remain highly readable on mobile.
+
+Do not invent official brand slogans. Use approved copy from the brand deck or clearly marked provisional copy.
+
+### 4.3 Scroll-controlled 3D storytelling
+
+As visitors scroll:
+
+- The featured cup may tilt or rotate gently.
+- The camera may shift slightly to reveal depth.
+- The scene transitions into real drink photography.
+- Brand copy appears through subtle scroll reveals.
+- The visual language remains coherent.
+
+Avoid full-page scroll hijacking or overly complicated 3D scenes.
+
+Use 3D where it improves the experience, not simply to demonstrate technical skill.
+
+### 4.4 Brand introduction
+
+Create an editorial section introducing Earth Been Coffee.
+
+Use concise, compelling storytelling based on the client's supplied brand deck.
+
+Suggested layout:
+- Large elegant typography
+- Carefully arranged professional imagery
+- A short story excerpt
+- A clear link to the Our Story page
+
+### 4.5 Featured drinks
+
+Showcase selected drinks using premium visual compositions.
+
+Possible categories:
+- Speciality coffee
+- Signature matcha
+- Luxury hot chocolate
+- Premium teas and chai
+- Iced drinks
+- Seasonal specials
+
+Use real approved photographs whenever available.
+
+Do not invent product names, prices or ingredient details.
+
+Interactive effects may include subtle image scaling, transitions and hover movement.
+
+### 4.6 Seasonal highlight
+
+Include an optional seasonal-drink feature.
+
+Its content must be easy to replace in the source code.
+
+### 4.7 Find Us preview
+
+Show a visually appealing preview of current stall locations.
+
+Include a link to the complete Find Us page.
+
+### 4.8 Closing section and footer
+
+Create a strong, elegant closing composition with:
+
+- Brand identity
+- Menu navigation
+- Location navigation
+- Instagram/social links
+- Business email
+- Partnership/contact link
+- Appropriate copyright text
+
+Avoid generic newsletter forms unless approved.
+
+---
+
+## 5. REQUIRED PAGES
+
+### PAGE 1 — HOME
+
+Implement the complete homepage experience described above.
+
+### PAGE 2 — OUR STORY
+
+Create an editorial storytelling page explaining:
+
+- Brand origin
+- Brand values
+- Coffee philosophy
+- Brand personality
+- Quality and customer experience, where supported by approved content
+
+Use strong typography, thoughtful imagery and restrained animation.
+
+The official brand deck is the source of truth.
+
+### PAGE 3 — MENU
+
+Build a beautifully designed, easy-to-read menu.
+
+Required categories:
+
+1. Speciality Coffee
+2. Signature Matcha
+3. Luxury Hot Chocolate
+4. Premium Teas / Chai
+5. Iced Drinks
+6. Seasonal Specials
+
+Each drink entry can contain:
+- Product name
+- Description
+- Price, when supplied
+- Photograph, when available
+- Relevant category
+
+Use clean typography and efficient mobile layouts.
+
+Do not hide essential menu information inside 3D interactions.
+
+All menu entries must be editable using structured local data files.
+
+Do not invent official menu items or prices.
+
+### PAGE 4 — FIND US
+
+Build a dedicated locations page.
+
+Support:
+- Current stalls
+- Future stalls
+- Full address
+- Trading days
+- Opening hours
+- Google Maps directions
+- Location imagery, when available
+
+The architecture must allow more locations to be added without redesigning the page.
+
+Use real verified location information only.
+
+For Google Maps navigation, open the appropriate directions link.
+
+Do not fabricate London addresses or opening hours.
+
+### PAGE 5 — CONTACT
+
+Create a simple, professional contact page supporting:
+
+- General business enquiries
+- Partnership enquiries
+- Collaborations
+- Trading enquiries
+- Instagram and other approved social links
+
+Use `mailto:` links for email contact.
+
+Do not add a submitted contact form that requires a backend unless separately approved.
+
+### GALLERY
+
+Create a premium photographic gallery using:
+- Drinks
+- Stall setups
+- Brand lifestyle photography
+- Customer experience imagery when supplied
+
+Prefer an editorial homepage gallery if it produces a cleaner overall website.
+
+---
+
+## 6. 3D IMPLEMENTATION REQUIREMENTS
+
+Develop a real interactive 3D experience, not merely a CSS illustration pretending to be a 3D object.
+
+Preferred approach:
+- Three.js rendering
+- React Three Fiber scene management
+- GLB/GLTF asset support
+- Optimised textures and geometry
+- Controlled lighting and shadows
+- Responsive camera configuration
+
+The 3D cup should incorporate the official logo once available.
+
+The object must look premium and reasonably realistic.
+
+Provide:
+- Smooth transitions
+- Subtle pointer interaction where appropriate
+- Scroll-controlled movement
+- Loading-state handling
+- Static image fallback
+- Graceful handling of unsupported devices
+- Reduced-motion alternative
+
+Do not let 3D rendering block essential website content.
+
+If a suitable approved 3D asset does not exist, create a provisional asset or clear placeholder and document what is needed for the final model.
+
+## 7. MOBILE-FIRST RESPONSIVE EXPERIENCE
+
+Mobile is the highest priority.
+
+Implement thoughtful responsive layouts for:
+
+- Small mobile screens
+- Large mobile screens
+- Tablets
+- Laptops
+- Large desktop screens
+
+Requirements:
+
+- Elegant mobile navigation
+- Comfortable touch targets
+- Proper typography scaling
+- No horizontal overflow
+- Correct 3D sizing
+- Optimised images
+- Stable page layout
+- Smooth scrolling without noticeable lag
+
+On low-powered devices, automatically simplify or replace complex visual effects when necessary.
+
+## 8. ACCESSIBILITY
+
+Ensure:
+
+- Semantic HTML
+- Keyboard-accessible navigation
+- Visible focus indicators
+- Readable font sizes
+- Appropriate colour contrast
+- Meaningful image alt text
+- Reduced-motion support
+- Accessible navigation menus
+- Proper headings and page landmarks
+
+Essential information and navigation must remain accessible without animation or WebGL.
+
+## 9. SEO AND PERFORMANCE
+
+Implement:
+
+- Page-specific metadata
+- Meaningful page titles
+- Meta descriptions
+- Open Graph metadata
+- Sitemap
+- robots.txt
+- Semantic page structure
+- Optimised images
+- Lazy loading for noncritical visuals
+- Proper font loading
+- Efficient code splitting
+
+Use applicable structured data only when verified business information is available.
+
+Avoid unsupported SEO claims.
+
+Prioritise strong Core Web Vitals and a fast first visit.
+
+Do not make the entire homepage dependent on downloading a large 3D model.
+
+## 10. CONTENT MANAGEMENT WITHOUT A BACKEND
+
+Store editable content in clearly structured local data files.
+
+Examples:
+
+- `src/data/menu.ts`
+- `src/data/locations.ts`
+- `src/data/socials.ts`
+- `src/data/siteContent.ts`
+- `src/data/seasonal.ts`
+
+The client must be able to update menu items, prices, locations, hours and seasonal highlights without changing component logic.
+
+No database or custom admin dashboard is required.
+
+Use realistic design placeholders only where absolutely necessary, and clearly label all unapproved content.
+
+## 11. COMPONENT ARCHITECTURE
+
+Organise the project into reusable components.
+
+Suggested structure:
+
+- Header and navigation
+- Mobile navigation
+- Hero section
+- 3D product scene
+- Brand introduction
+- Featured drinks
+- Menu category display
+- Seasonal highlight
+- Locations section
+- Gallery
+- Contact section
+- Footer
+- Motion utilities
+- Reusable typography components
+
+Separate content, layout, 3D scenes and animation logic.
+
+Use TypeScript types for menu items, locations and other structured data.
+
+Do not build the entire website as one oversized component.
+
+## 12. DESIGN QUALITY STANDARDS
+
+The final result must feel like a professionally commissioned luxury-brand website.
+
+Before completing any page, evaluate:
+
+- Does it look unique?
+- Does it feel consistent with Earth Been Coffee?
+- Does it have a strong editorial identity?
+- Is the typography genuinely beautiful?
+- Are the images professionally composed?
+- Is the animation purposeful?
+- Does the mobile version feel as polished as desktop?
+- Are navigation and calls to action obvious?
+- Does the website communicate the client's business clearly?
+
+If a section looks generic or unfinished, redesign it rather than merely changing its colours.
+
+Use professional visual design principles, not repetitive templates.
+
+## 13. DEVELOPMENT WORKFLOW
+
+### Stage 1 — Requirements and creative direction
+
+Review the attached Earth Been Coffee Website Requirements PDF and the supplied brand deck.
+
+Identify:
+- Confirmed requirements
+- Required assets
+- Missing content
+- Client approval decisions
+
+Do not reinterpret missing information as permission to invent official business details.
+
+### Stage 2 — Homepage design approval
+
+First create a complete visual homepage concept demonstrating:
+- Brand identity
+- Hero composition
+- 3D interaction direction
+- Typography
+- Colour palette
+- Featured drinks
+- Mobile layout
+
+Present this for client approval before locking the design system and completing the rest of the website.
+
+### Stage 3 — Full frontend development
+
+After the design direction is approved, implement every required page and feature.
+
+Build real functional routes and components, not screenshots or a decorative static mockup.
+
+### Stage 4 — Quality assurance
+
+Verify:
+- All navigation works
+- Each page loads
+- Links work
+- Mobile navigation works
+- Menu categories display correctly
+- Locations are structured correctly
+- Contact links are functional
+- No broken images
+- No major console errors
+- No hydration errors
+- No TypeScript errors
+- No build failures
+- Smooth mobile performance
+- 3D fallback works
+
+### Stage 5 — Deployment and handover
+
+Prepare the project for a suitable hosting platform such as Vercel.
+
+Provide:
+- Complete source code
+- README
+- Installation instructions
+- Development commands
+- Production build instructions
+- Deployment guide
+- Domain connection instructions
+- Content update guide
+- Required asset checklist
+- Hosting/domain ownership handover checklist
+
+Any analytics implementation must be agreed with the client before activation.
+
+## 14. FINAL DELIVERY REQUIREMENTS
+
+Do not stop after producing a design description or a homepage screenshot.
+
+Deliver a fully coded, maintainable website once the homepage creative direction is approved.
+
+Include every requested page and working navigation.
+
+Do not claim a feature is complete unless its actual implementation exists.
+
+Do not claim to have tested or deployed anything unless those actions were genuinely performed.
+
+Do not substitute random stock images for official Earth Been Coffee photography without clearly identifying them as placeholders.
+
+Maintain the exact brand name:
+
+**EARTH BEEN COFFEE**
+
+## 15. FINAL CREATIVE INSTRUCTION
+
+Create a website where premium editorial storytelling meets carefully designed interactive 3D.
+
+The first impression should communicate quality, warmth, sophistication and distinctive speciality coffee.
+
+Visitors should remember the brand, understand its drinks, find its stalls and easily contact the business.
+
+The experience must be modern and visually impressive, but never sacrifice usability, accessibility, mobile performance or the client's actual requirements.
+
+**Start by reviewing the provided requirements and assets, then produce the homepage creative concept and implementation plan. Do not proceed with unapproved full-site visual direction or invent missing client information.**
