@@ -17,7 +17,7 @@ export default function Header() {
  return <>
   <div className="announcement"><span>GOOD COFFEE. GOOD COMPANY. GOOD DAYS.</span><span className="announcement-star">✳</span><span>YOUR DAILY LITTLE RITUAL</span></div>
   <header className="site-header"><div className="site-header-inner container">
-    <Wordmark inverted />
+    <Wordmark />
     <nav className="nav-desktop" aria-label="Main navigation">{nav.map(([label,url])=><Link key={url} href={url} className={pathname===url?'is-active':''} aria-current={pathname===url?'page':undefined}>{label}</Link>)}</nav>
     <Link href="/contact" className="header-cta">LET’S TALK <ArrowUpRight size={16}/></Link>
     <button type="button" className="hamburger" onClick={()=>setIsOpen(v=>!v)} aria-label={isOpen?'Close menu':'Open menu'} aria-expanded={isOpen} aria-controls="mobile-menu">{isOpen?<X size={26}/>:<Menu size={26}/>}</button>
