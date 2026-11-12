@@ -44,3 +44,10 @@ For Vercel, import the project root and use the standard Next.js framework prese
 ## Validation
 
 The TS/TSX source has been syntax checked and local referenced assets checked. A full production Next.js build needs to run during deployment or in an environment where npm packages can be fetched; dependency installation was unavailable in this environment.
+
+
+## Header logo revision
+- The owner-supplied official EBC monogram is now in `public/images/earth-been-navbar-monogram.png` with a genuinely transparent background (not CSS blending). Cream original ink is changed to dark pine solely for legibility against the cream navigation bar.
+- The navbar wordmark uses matching pine/copper colors and is accessible by its home link.
+- The redundant homepage logo banner and footer JPEG were removed.
+- All existing content, menu, contact details, branded product hero and animations remain unchanged.

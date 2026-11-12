@@ -235,9 +235,6 @@
 }
 
 /* Official owner-provided branding and menu updates — additive to the original design. */
-.official-brand-section{display:flex;align-items:center;justify-content:center;background:#172519;padding:14px 18px 24px;overflow:hidden}
-.official-brand-section img{display:block;width:min(690px,100%);height:auto;mix-blend-mode:normal}
-.footer-official-logo{display:block;width:min(360px,100%);height:auto;mix-blend-mode:normal;background:#172519}
 .menu-details{scroll-margin-top:160px}
 .menu-details--drinks{background:#fff9f0}
 .menu-details--sweets{background:#f1e1cd}
@@ -298,7 +295,6 @@
  .find-map-card{height:500px}
 }
 @media(max-width:650px){
- .official-brand-section{padding:7px 10px 12px}
  .menu-details{scroll-margin-top:132px}
  .menu-details-heading{display:block;margin-bottom:28px}
  .menu-details-heading .display-title{margin-bottom:15px}
@@ -323,11 +319,17 @@
  .contact-menu-cards img{height:230px}
  .contact-menu-cards span{padding:12px;font-size:9px;letter-spacing:.05em}
  .contact-menu-cards svg{width:15px}
- .footer-official-logo{max-width:310px}
 }
 @media(prefers-reduced-motion:reduce){.menu-board-card,.contact-menu-cards img{transition:none}}
-/* Exact supplied official mark in the navigation, blended seamlessly into the dark header. */
-.brand-lockup--official{display:inline-flex;align-items:center;flex:none}
-.brand-logo-image{width:200px;height:83px;object-fit:contain;mix-blend-mode:lighten}
-@media(max-width:900px){.brand-logo-image{width:180px;height:76px}}
-@media(max-width:650px){.brand-logo-image{width:153px;height:64px}}
+/* Brand mark: genuine EBC artwork keyed to transparency and adjusted for the cream navbar.
+   The full rectangular JPEG is deliberately not shown anywhere on the page. */
+.brand-lockup--official{display:inline-flex;align-items:center;gap:13px;flex:0 0 auto;min-width:0;transition:opacity .2s ease}
+.brand-lockup--official:hover{opacity:.88}
+.brand-mark-image{display:block;width:127px;height:auto;flex:0 0 auto;object-fit:contain}
+.brand-word-lines{display:flex;flex-direction:column;justify-content:center;line-height:1;gap:7px;white-space:nowrap}
+.brand-line-primary{font-family:var(--font-text);font-size:16px;letter-spacing:.13em;font-weight:900;color:var(--pine-deep)}
+.brand-line-secondary{font-family:var(--font-text);font-size:11px;letter-spacing:.39em;font-weight:800;color:#af6333}
+.footer-brand .footer-brand-message{font:normal clamp(24px,2.4vw,38px)/1.28 var(--font-display);letter-spacing:-.025em;color:var(--cream);max-width:370px;margin:0}
+.footer-brand-message em{color:#dfbc94;font-style:italic}
+@media(max-width:900px){.brand-mark-image{width:113px}.brand-line-primary{font-size:15px}.brand-line-secondary{font-size:10px}}
+@media(max-width:650px){.brand-lockup--official{gap:9px}.brand-mark-image{width:93px}.brand-word-lines{gap:5px}.brand-line-primary{font-size:12px;letter-spacing:.095em}.brand-line-secondary{font-size:9px;letter-spacing:.26em}}
