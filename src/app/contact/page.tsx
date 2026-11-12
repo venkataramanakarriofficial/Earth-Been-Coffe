@@ -1,10 +1,29 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import {ArrowUpRight, Mail, MapPin, Heart} from 'lucide-react';
-import {siteContent} from '@/data/siteContent';
+import { ArrowUpRight, MapPin, Phone, Coffee } from 'lucide-react';
+import { siteContent } from '@/data/siteContent';
 import Reveal from '@/components/site/Reveal';
-export const metadata:Metadata={title:'Contact',description:'Get in touch with Earth Been Coffee about enquiries, conversations and collaborations.'};
-export default function Contact(){return <>
- <section className="subhero subhero-contact"><div className="container subhero-layout"><div><p className="micro-label">04 / SAY HELLO</p><h1>Let&apos;s make<br/>something <em>good.</em></h1><p>Questions, ideas, collaborations or just a good hello. We&apos;d love to hear from you.</p></div><div className="subhero-photo"><img src="/images/espresso-closeup.webp" alt="Rich espresso in a forest green Earth Been Coffee cup"/></div></div></section>
- <section className="contact-body section-pad"><div className="container contact-grid"><Reveal><p className="micro-label">WE&apos;RE ALL EARS</p><h2 className="display-title">Every great<br/>conversation<br/>starts <em>somewhere.</em></h2><p>Whether it&apos;s a business enquiry or an idea worth sharing, there&apos;s always room to connect over coffee.</p><div className="contact-flower" aria-hidden="true">✳</div></Reveal><Reveal delay={90}><div className="contact-tile"><Mail size={24}/><span>01 / GET IN TOUCH</span><h3>Say hello.</h3>{siteContent.contact.email?<a href={`mailto:${siteContent.contact.email}`} className="inline-arrow">{siteContent.contact.email} <ArrowUpRight size={18}/></a>:<p>Our official contact email will be shared here soon. Please check back for verified details.</p>}</div><div className="contact-tile"><Heart size={24}/><span>02 / WORK TOGETHER</span><h3>Let&apos;s collaborate.</h3><p>For partnerships and brand conversations, reach out through our verified contact details once available.</p></div><div className="contact-tile"><MapPin size={24}/><span>03 / COME VISIT</span><h3>Find your coffee moment.</h3><p>London, United Kingdom</p><Link href="/find-us" className="inline-arrow">EXPLORE LOCATIONS <ArrowUpRight size={18}/></Link></div></Reveal></div></section>
+
+export const metadata: Metadata = {
+ title: 'Contact',
+ description: 'Call Earth Been Coffee on +44 7763 076666 or visit us at 69 Ridley Road, London E8 2NP.',
+};
+
+export default function Contact() {return <>
+ <section className="subhero subhero-contact"><div className="container subhero-layout">
+  <div><p className="micro-label">04 / SAY HELLO</p><h1>Let&apos;s make<br/>something <em>good.</em></h1><p>For a coffee, a conversation or a friendly hello, we&apos;d love to hear from you.</p></div>
+  <div className="subhero-photo"><img src="/images/espresso-closeup.webp" alt="A fresh espresso in an Earth Been Coffee cup"/></div>
+ </div></section>
+ <section className="contact-body section-pad"><div className="container contact-grid">
+  <Reveal><p className="micro-label">WE&apos;RE ALL EARS</p><h2 className="display-title">Every great<br/>conversation<br/>starts <em>somewhere.</em></h2><p>We&apos;re just a call or a coffee away.</p><div className="contact-flower" aria-hidden="true">✳</div></Reveal>
+  <Reveal delay={90}>
+   <div className="contact-tile"><Phone size={24}/><span>01 / GIVE US A CALL</span><h3>Say hello.</h3><a href={siteContent.contact.phoneHref} className="inline-arrow">{siteContent.contact.phoneDisplay}<ArrowUpRight size={18}/></a></div>
+   <div className="contact-tile"><Coffee size={24}/><span>02 / GET IN TOUCH</span><h3>Let&apos;s talk coffee.</h3><p>Questions, catering enquiries or collaborations? We&apos;d be happy to chat.</p><a href={siteContent.contact.phoneHref} className="inline-arrow">CALL EARTH BEEN COFFEE <ArrowUpRight size={18}/></a></div>
+   <div className="contact-tile"><MapPin size={24}/><span>03 / COME VISIT</span><h3>Find your coffee moment.</h3><p>{siteContent.address.street}<br/>{siteContent.address.locality}</p><a href={siteContent.address.mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-arrow">GET DIRECTIONS <ArrowUpRight size={18}/></a></div>
+  </Reveal>
+ </div></section>
+ <section className="contact-menu-preview section-pad"><div className="container">
+  <div className="contact-menu-heading"><p className="micro-label">BEFORE YOU VISIT</p><h2 className="display-title">See what&apos;s <em>brewing.</em></h2></div>
+  <div className="contact-menu-cards"><Link href="/menu#drinks"><img src="/images/earth-been-drinks-menu.jpg" alt="Earth Been Coffee drinks menu" loading="lazy"/><span>DRINKS MENU <ArrowUpRight size={18}/></span></Link><Link href="/menu#sweets"><img src="/images/earth-been-sweets-menu.jpg" alt="Earth Been Coffee sweets menu" loading="lazy"/><span>SWEETS MENU <ArrowUpRight size={18}/></span></Link></div>
+ </div></section>
  </>}

@@ -1,12 +1,14 @@
-export type StallLocation = {
+import { siteContent } from './siteContent';
+
+export type CafeLocation = {
   id: string;
   name: string;
   address: string;
-  tradingDays: string;
-  openingHours: string;
-  image?: string;
   mapsUrl: string;
-  status: 'open' | 'coming-soon';
 };
-// No verified site addresses or trading times supplied. Do not invent them.
-export const locations: StallLocation[] = [];
+export const locations: CafeLocation[] = [{
+  id: 'ridley-road',
+  name: 'Earth Been Coffee · Ridley Road',
+  address: siteContent.address.full,
+  mapsUrl: siteContent.address.mapsUrl,
+}];

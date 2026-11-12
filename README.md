@@ -1,60 +1,46 @@
-# Earth Been Coffee — Premium Café Website (Complete Redesign)
+# Earth Been Coffee — Website
 
-This is the **complete website source**, updated directly from the latest Earth Been Coffee project ZIP. Built with **Next.js 15, React 19, TypeScript and CSS**.
+Next.js 15 / React 19 / TypeScript. This is the updated source of the existing premium Earth Been Coffee website. Its design system, pages, and opening sequence are preserved.
 
-## What changed in this version
+## November 12, 2026 content update
 
-- The desktop and mobile navbar is **warm cream** with dark forest-green branding, links, and a contrasting green contact button.
-- The homepage hero was rebuilt around a **new high-resolution branded cup with floating coffee beans**, constrained inside the right-side composition so it no longer crowds the typography or crops awkwardly. The old hero image is not used.
-- **12 cohesive new photo / product assets** are now included in `public/images`, all served as compressed WebP files. Existing photos were removed from this project rather than leaving orphaned originals.
-- Homepage imagery, three drink cards, the café-story sections, editorial lifestyle photography, and Find Us are updated. The **Menu, Our Story, Find Us, and Contact** pages now use the new asset set too.
-- The **opening animation is deliberately preserved**. It continues to use the supplied `public/images/floating-cup.webp`, exactly as before. It plays once per browser session and includes Skip Intro.
-- Removed unused React Three Fiber / Drei / Three packages from package.json and refreshed package-lock.json. The animation is lightweight CSS and images, not WebGL.
-- The old Next.js build output and all node_modules are excluded from the distributable ZIP.
+- Incorporated the supplied official EBC logo in the navigation, homepage, and footer.
+- Added the supplied branded takeaway-cup artwork as a transparent, web-optimised product cutout in the homepage hero and opening sequence. The original photo is also included for reference.
+- Replaced provisional menu categories with the exact drinks and sweets from the provided menu boards.
+- Changed **Banana Bar** to **Banana Bread Slices** in both the website's text menu and the displayed sweets menu board.
+- Added the supplied drinks and sweets menu board images as viewable full-size files on the Menu page, with menu-board previews after the Contact page details.
+- Added the business contact **+44 7763 076666** (click-to-call) and **69 Ridley Road, Dalston, London E8 2NP**, linked to the supplied Google Maps location, in Contact, Find Us, footer and homepage.
+- The Find Us page now contains a map and a direct Google Maps link. Opening hours and menu prices are intentionally omitted because they were not supplied.
+- Existing layout, animation, colour scheme, photo assets and the remaining pages are retained.
 
-## Getting started
+## Start locally
 
-Requires **Node.js 22**.
+Requires Node.js 22.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Visit `http://localhost:3000` to view the site.
+Visit `http://localhost:3000`.
 
-Production validation:
+## Production build
 
 ```bash
+npm ci
 npm run build
 npm start
 ```
 
-## Deploying to GitHub / Vercel
+For Vercel, import the project root and use the standard Next.js framework preset. The distribution ZIP excludes temporary Next.js output, Git history and `node_modules`.
 
-1. Extract the ZIP. The app lives in the `earth-been-coffee` folder.
-2. Replace the previous app source with the extracted files, **including deleting obsolete files**. Do not just add new files over an old repository, because that leaves tracked legacy files in Git.
-3. From the repository root, commit file deletions too:
+## Content editing
 
-```bash
-git add -A
-git commit -m "Premium café redesign: new imagery, cream navbar, responsive hero"
-git push origin main
-```
+- Menu item names: `src/data/menu.ts`
+- Phone, address and official Google Maps URL: `src/data/siteContent.ts`
+- Display location: `src/data/locations.ts`
+- Menu board images and branding assets: `public/images/earth-been-*`
 
-If the earlier repository still contains old `src/components/3d`, `src/components/home` or `src/components/ui` directories that are not part of this ZIP, remove them before committing; they are no longer used.
+## Validation
 
-## Where to edit future content
-
-- Business contact: `src/data/siteContent.ts`
-- Location details: `src/data/locations.ts`
-- Menu category data: `src/data/menu.ts`
-- Navigation: `src/components/layout/Header.tsx`
-- Homepage content: `src/app/page.tsx`
-- Photography: `public/images/`
-
-The example visuals are concept imagery and should not be treated as documentary photos of an actual shop. Prices, addresses, hours, deals and order URLs are not invented. Confirm business details before publishing them.
-
-## Verification
-
-The image references, WebP assets, JavaScript/TypeScript/JSX syntax, CSS syntax, and lockfile consistency were checked. Full `next build` could not run in the offline project environment because npm dependencies could not be fetched. Run `npm ci && npm run build` locally or let Vercel validate the final deployment.
+The TS/TSX source has been syntax checked and local referenced assets checked. A full production Next.js build needs to run during deployment or in an environment where npm packages can be fetched; dependency installation was unavailable in this environment.

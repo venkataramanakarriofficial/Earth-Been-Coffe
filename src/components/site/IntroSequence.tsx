@@ -23,7 +23,7 @@ export default function IntroSequence(){
  if(!visible) return null;
  return <div className={`intro-screen ${leaving?'intro-screen--out':''}`} role="presentation">
    <div className="intro-top"><span>EARTH BEEN</span><span className="intro-mini-star">✳</span><span>COFFEE</span></div>
-   <img className="intro-floating-cup" src="/images/floating-cup.webp" alt="" fetchPriority="high" />
+   <img className="intro-floating-cup" src="/images/earth-been-branded-cup.webp" alt="" fetchPriority="high" />
    <div className="intro-bottom"><span>GOOD THINGS ARE BREWING</span><div className="intro-progress" aria-hidden="true"><i/></div><span>EST. FOR THE EVERYDAY</span></div>
    <button className="intro-skip" onClick={skip} type="button">SKIP INTRO <span aria-hidden="true">↗</span></button>
  </div>;
