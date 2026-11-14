@@ -22,8 +22,8 @@ export default function Contact() {return <>
    <div className="contact-tile"><MapPin size={24}/><span>03 / COME VISIT</span><h3>Find your coffee moment.</h3><p>{siteContent.address.street}<br/>{siteContent.address.locality}</p><a href={siteContent.address.mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-arrow">GET DIRECTIONS <ArrowUpRight size={18}/></a></div>
   </Reveal>
  </div></section>
- <section className="contact-menu-preview section-pad"><div className="container">
-  <div className="contact-menu-heading"><p className="micro-label">BEFORE YOU VISIT</p><h2 className="display-title">See what&apos;s <em>brewing.</em></h2></div>
-  <div className="contact-menu-cards"><Link href="/menu#drinks"><img src="/images/earth-been-drinks-menu.jpg" alt="Earth Been Coffee drinks menu" loading="lazy"/><span>DRINKS MENU <ArrowUpRight size={18}/></span></Link><Link href="/menu#sweets"><img src="/images/earth-been-sweets-menu.jpg" alt="Earth Been Coffee sweets menu" loading="lazy"/><span>SWEETS MENU <ArrowUpRight size={18}/></span></Link></div>
+ <section className="contact-menu-preview section-pad"><div className="container contact-menu-simple">
+  <div><p className="micro-label">BEFORE YOU VISIT</p><h2 className="display-title">See what&apos;s <em>brewing.</em></h2><p>Explore our coffee, iced drinks and baked treats before you visit.</p></div>
+  <Link className="button button-green" href="/menu">VIEW THE MENU <ArrowUpRight size={18}/></Link>
  </div></section>
  </>}
