@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight, MapPin, Phone, Coffee } from 'lucide-react';
 import { siteContent } from '@/data/siteContent';
 import Reveal from '@/components/site/Reveal';
+import Photo from '@/components/site/Photo';
 
 export const metadata: Metadata = {
  title: 'Contact',
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function Contact() {return <>
  <section className="subhero subhero-contact"><div className="container subhero-layout">
   <div><p className="micro-label">04 / SAY HELLO</p><h1>Let&apos;s make<br/>something <em>good.</em></h1><p>For a coffee, a conversation or a friendly hello, we&apos;d love to hear from you.</p></div>
-  <div className="subhero-photo"><img src="/images/espresso-closeup.webp" alt="A fresh espresso in an Earth Been Coffee cup"/></div>
+  <div className="subhero-photo"><Photo photo="craft" alt="Espresso being carefully prepared on a coffee machine"/></div>
  </div></section>
  <section className="contact-body section-pad"><div className="container contact-grid">
   <Reveal><p className="micro-label">WE&apos;RE ALL EARS</p><h2 className="display-title">Every great<br/>conversation<br/>starts <em>somewhere.</em></h2><p>We&apos;re just a call or a coffee away.</p><div className="contact-flower" aria-hidden="true">✳</div></Reveal>

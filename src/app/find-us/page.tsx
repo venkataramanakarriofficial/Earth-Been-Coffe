@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { ArrowUpRight, MapPin, Coffee, Phone } from 'lucide-react';
 import Reveal from '@/components/site/Reveal';
+import Photo from '@/components/site/Photo';
 import { locations } from '@/data/locations';
 import { siteContent } from '@/data/siteContent';
 
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function FindUs(){return <>
  <section className="subhero subhero-visit"><div className="container subhero-layout">
   <div><p className="micro-label">03 / FIND US</p><h1>Good coffee.<br/>Good <em>company.</em></h1><p>Come and find your new favourite coffee stop in Dalston.</p></div>
-  <div className="subhero-photo"><img src="/images/cafe-exterior.webp" alt="Welcoming café storefront"/></div>
+  <div className="subhero-photo"><Photo photo="coffeeBar" alt="Warm atmosphere inside a neighbourhood café"/></div>
  </div></section>
  <section className="locations-body section-pad"><div className="container">
   <div className="find-location-grid">
