@@ -479,8 +479,6 @@
 .menu-2026-hero-copy h1 em{font-style:italic;font-weight:normal;color:#9e6749}
 .menu-2026-hero-copy>p:not(.micro-label){font-size:17px;line-height:1.85;color:#625d52;max-width:540px;margin:0 0 30px}
 .menu-2026-hero-copy .button{min-height:58px}
-.menu-2026-hero-signoff{display:flex;align-items:center;gap:20px;margin-top:52px;font-size:9px;font-weight:850;letter-spacing:.22em;color:#75604f}
-.menu-2026-star{font:normal 24px var(--font-display);color:#b38359}
 .menu-2026-hero-photo{height:515px;max-width:600px;position:relative;overflow:visible}
 .menu-2026-hero-photo>img{width:100%;height:100%;object-fit:cover;object-position:center 36%;border-radius:280px 280px 8px 8px;background:#ddc7ae;box-shadow:0 20px 50px rgba(46,38,23,.1)}
 .menu-2026-hero-photo:after{content:'';position:absolute;inset:16px -14px -14px 16px;border:1px solid #ae977e;border-radius:290px 290px 8px 8px;pointer-events:none;z-index:-1}
@@ -513,7 +511,6 @@
 .menu-2026-drinks-grid{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);align-items:start;gap:clamp(40px,5vw,86px)}
 .menu-2026-drinks-photo{height:790px;position:sticky;top:180px;min-width:0}
 .menu-2026-drinks-photo img{height:100%;width:100%;object-fit:cover;object-position:center;border-radius:260px 260px 7px 7px;background:#ead5b8}
-.menu-2026-vertical{position:absolute;top:34px;right:13px;writing-mode:vertical-rl;color:#fff7e9;letter-spacing:.24em;font-size:9px;font-weight:900;text-shadow:0 1px 8px #243726}
 .menu-2026-photo-note{position:absolute;bottom:25px;left:22px;background:#faf0e1;color:var(--pine);font:normal clamp(22px,2.3vw,34px)/1.04 var(--font-display);padding:20px 25px;box-shadow:0 6px 19px rgba(33,31,19,.07)}
 .menu-2026-photo-note em{font-style:italic;color:#a16a4d}
 .menu-2026-drinks-list{display:grid;grid-template-columns:1fr;gap:41px}
@@ -616,7 +613,6 @@
  .menu-2026-hero-copy{padding:0}
  .menu-2026-hero-copy h1{font-size:clamp(63px,13.2vw,85px);margin:20px 0 23px}
  .menu-2026-hero-copy>p:not(.micro-label){line-height:1.7;margin-bottom:25px}
- .menu-2026-hero-signoff{margin-top:30px}
  .menu-2026-hero-photo{width:calc(100% - 16px);height:340px}
  .menu-2026-hero-photo>img{border-radius:190px 190px 7px 7px}
  .menu-2026-photo-sticker{right:-16px;bottom:30px}
@@ -978,4 +974,54 @@ body.nav-open .whatsapp-float,body.intro-lock .whatsapp-float {opacity:0;pointer
 @media(prefers-reduced-motion:reduce) {
   .coffee-transition,.coffee-transition__cup,.coffee-transition__progress span,.whatsapp-float,.whatsapp-float__hint{animation:none!important;transition:none!important;}
   .coffee-transition{display:none!important;}
+}
+
+
+/* Quick actions: map directions above WhatsApp on every page. */
+.directions-float {
+  --dir-size:58px;
+  position:fixed;
+  z-index:160;
+  right:max(28px,env(safe-area-inset-right,0px) + 22px);
+  bottom:calc(max(25px,env(safe-area-inset-bottom,0px) + 19px) + 64px + 18px);
+  width:var(--dir-size);height:var(--dir-size);
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:#174e40;color:#fff9ed;
+  border:2px solid #fff9ed;
+  box-shadow:0 10px 27px rgba(20,59,48,.26),0 0 0 3px rgba(255,255,255,.88);
+  transition:background .25s ease,transform .25s ease,box-shadow .25s ease,opacity .2s ease;
+}
+.directions-float svg {width:29px;height:29px;fill:none;}
+.directions-float:hover,.directions-float:focus-visible {
+  transform:translateY(-4px) scale(1.045);
+  background:#216b56;
+  box-shadow:0 14px 32px rgba(20,59,48,.3),0 0 0 3px rgba(255,255,255,.92);
+}
+.directions-float__hint {
+  position:absolute;right:calc(100% + 17px);top:50%;
+  transform:translate(6px,-50%);
+  padding:10px 15px;border-radius:50px;
+  background:var(--pine-deep);color:#fff9ed;
+  white-space:nowrap;font-size:12px;font-weight:750;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:transform .2s ease,opacity .2s ease,visibility .2s ease;
+}
+.directions-float:hover .directions-float__hint,
+.directions-float:focus-visible .directions-float__hint {
+  opacity:1;visibility:visible;transform:translate(0,-50%);
+}
+body.nav-open .directions-float,body.intro-lock .directions-float {opacity:0;pointer-events:none;}
+@media(max-width:650px) {
+  .directions-float {
+    --dir-size:52px;
+    right:max(19px,env(safe-area-inset-right,0px) + 14px);
+    bottom:calc(max(18px,env(safe-area-inset-bottom,0px) + 12px) + 56px + 15px);
+  }
+  .directions-float svg {width:26px;height:26px;}
+  .directions-float__hint {display:none;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .directions-float,.directions-float__hint {animation:none!important;transition:none!important;}
 }

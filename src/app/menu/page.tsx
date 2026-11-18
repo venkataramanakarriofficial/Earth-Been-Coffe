@@ -27,7 +27,6 @@ export default function Menu(){
      <h1 id="menu-page-heading">A cup for<br/><em>every mood.</em></h1>
      <p>First-coffee-of-the-day people. Iced-coffee-all-year people. Just-here-for-a-croissant people. You&apos;re all welcome.</p>
      <a className="button button-green" href="#menu-explore">FIND YOUR FAVOURITE <ArrowDownRight size={18}/></a>
-     <div className="menu-2026-hero-signoff"><span>GOOD COFFEE</span><span className="menu-2026-star">✳</span><span>GOOD MOMENTS</span></div>
     </Reveal>
     <div className="menu-2026-hero-photo image-hover">
      <Photo photo="barista" alt="Barista offering a freshly made latte with delicate foam art" loading="eager" fetchPriority="high" />
@@ -57,7 +56,6 @@ export default function Menu(){
     <div className="menu-2026-drinks-grid">
      <Reveal className="menu-2026-drinks-photo">
       <Photo photo="craft" alt="Barista at work preparing fresh espresso on a café coffee machine" loading="lazy" />
-      <span className="menu-2026-vertical">THE LITTLE DAILY RITUAL — EARTH BEEN COFFEE</span>
       <div className="menu-2026-photo-note">A good day starts<br/><em>somewhere.</em></div>
      </Reveal>
      <div className="menu-2026-drinks-list">
