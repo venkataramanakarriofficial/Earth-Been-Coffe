@@ -662,3 +662,88 @@
 @media(prefers-reduced-motion:reduce){
  .home-hero-photo-frame,.home-hero-photo-frame img,.eb-intro,.eb-intro-photo,.eb-intro-photo img,.eb-intro-content>*{animation:none!important;transition:none!important}
 }
+
+
+/* ============================================================
+   HERO + SCROLLING REFINEMENT / 19 NOV 2026
+   Simplified photo composition, no floating copy/stickers.
+   Correct the underlying fractional grid overflow rather than
+   only masking it; keep all vertical scrolling operational.
+   ============================================================ */
+html,body {width:100%;max-width:100%;overflow-x:clip;}
+/* Keep wheel, trackpad, touch and keyboard scrolling, but remove
+   the distracting native scrollbar tracks from the café layout. */
+html {scrollbar-width:none;-ms-overflow-style:none;}
+html::-webkit-scrollbar,body::-webkit-scrollbar {display:none;width:0;height:0;}
+main,.site-footer,.site-header,.announcement {min-width:0;max-width:100%;}
+/* A transformed strip can create unwanted page-level overflow. */
+.coffee-marquee {transform:none;}
+/* Percentage tracks totaling 100% plus a gap overflow the page. */
+.about-grid {grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);}
+.visit-grid {grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);}
+.locations-empty {grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);}
+.subhero-layout {grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);}
+.about-grid > *, .visit-grid > *, .locations-empty > *,
+.subhero-layout > *,.home-hero-grid > *, .moments-grid > *,
+.story-main-grid > *, .menu-2026-hero-grid > * {min-width:0;}
+.home-hero {overflow:clip;isolation:isolate;}
+.home-hero-grid {
+  grid-template-columns:minmax(0,1.055fr) minmax(0,.945fr);
+  column-gap:clamp(20px,2.8vw,48px);
+  min-height:640px;
+}
+.home-hero-copy {padding:84px 0 86px;}
+.home-hero-art--real {
+  padding:45px 0 45px 0;
+  height:640px;
+  min-width:0;
+  overflow:visible;
+  justify-content:flex-end;
+}
+.home-hero-photo-frame {
+  width:min(100%,530px);
+  height:100%;
+  transform:none;
+  border:1px solid rgba(247,224,191,.2);
+  border-radius:270px 270px 12px 12px;
+  animation:ebRefinedPhotoEnter .95s cubic-bezier(.2,.7,.2,1) both;
+}
+.home-hero-photo-frame img {object-position:50% 73%;}
+.home-hero-photo-frame:after {background:linear-gradient(to top,rgba(7,29,22,.16),transparent 30%);}
+@keyframes ebRefinedPhotoEnter {
+ from {opacity:0;transform:translateY(24px) scale(.985)}
+ to {opacity:1;transform:translateY(0) scale(1)}
+}
+.menu-2026-anchor-nav {scrollbar-width:none;-ms-overflow-style:none;}
+.menu-2026-anchor-nav::-webkit-scrollbar {display:none;}
+@media (max-width:1190px) {
+ .home-hero-grid {grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);}
+ .home-hero-art--real {padding:42px 0;height:590px;}
+ .home-hero-copy {padding:70px 0 78px;}
+}
+@media (max-width:900px) {
+ .home-hero-grid {grid-template-columns:minmax(0,1fr);gap:0;min-height:0;}
+ .home-hero-copy {padding:66px 0 0;}
+ .home-hero-art--real {
+   width:100%;max-width:610px;height:495px;
+   margin:0 auto 30px;padding:26px 0 25px;
+   justify-content:center;
+ }
+ .home-hero-photo-frame {width:min(100%,440px);height:100%;margin:0 auto;}
+ .subhero-layout {grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+}
+@media (max-width:650px) {
+ .home-hero-copy {padding:54px 0 5px;}
+ .home-hero-art--real {height:395px;padding:10px 0 20px;margin:10px auto 18px;}
+ .home-hero-photo-frame {width:min(100%,350px);margin:auto;border-radius:190px 190px 9px 9px;}
+ .home-hero-copy h1 {overflow-wrap:normal;}
+ .hero-scroll {display:none;}
+}
+@media (max-width:390px) {
+ .home-hero-art--real {height:345px;}
+ .home-hero-photo-frame {width:min(100%,300px);}
+ .home-hero-copy h1 {font-size:clamp(42px,12.5vw,51px);}
+}
+@media (prefers-reduced-motion:reduce) {
+ .home-hero-photo-frame,.home-hero-photo-frame img {animation:none;transform:none;}
+}
