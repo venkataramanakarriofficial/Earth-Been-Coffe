@@ -747,3 +747,131 @@ main,.site-footer,.site-header,.announcement {min-width:0;max-width:100%;}
 @media (prefers-reduced-motion:reduce) {
  .home-hero-photo-frame,.home-hero-photo-frame img {animation:none;transform:none;}
 }
+
+
+/* =============================================================
+   MOBILE ART DIRECTION / 19 NOV 2026
+   The late desktop grid corrections above must not override the
+   responsive stacking rules. All changes below are mobile-only;
+   desktop appearance, content and functionality stay unchanged.
+   ============================================================= */
+@media (max-width: 900px) {
+  /* The long brown announcement looks crowded above a phone navbar. */
+  .announcement { display: none; }
+  .site-header-inner { height: 76px; }
+  .mobile-panel { top: 76px; inset-block-start: 76px; }
+
+  /* Clear, full-width editorial layouts rather than 2 cramped columns.
+     On mobile the story comes first, then its photography. */
+  .about-grid, .visit-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(34px, 5vw, 52px);
+  }
+  .about-copy, .visit-copy {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .about-photo-composition, .visit-art {
+    order: 2;
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-photo-composition {
+    margin: 0;
+    padding: 0;
+    height: clamp(400px, 70vw, 575px);
+  }
+  .about-photo-large {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 260px 260px 12px 12px;
+  }
+  /* Remove round sticker and overlap on smaller screens. */
+  .about-photo-badge, .visit-round-note { display: none; }
+  .about-photo-small { display: none; }
+  .about-copy .display-title, .visit-copy .display-title {
+    max-width: 760px;
+    overflow-wrap: normal;
+  }
+  .visit-art {
+    height: clamp(365px, 65vw, 520px);
+    margin: 0;
+    border-radius: 12px 220px 12px 12px;
+    overflow: hidden;
+  }
+  .visit-art > img { width: 100%; height: 100%; object-position: 72% center; }
+  .visit-copy > p:not(.micro-label) { max-width: 580px; }
+
+  /* Other single-column page sections should stay single-column
+     despite their desktop rules declared near the end of the file. */
+  .subhero-layout, .locations-empty { grid-template-columns: minmax(0, 1fr); }
+  .category-tabs-wrap { top: 76px; }
+  .menu-2026-anchor-wrap { top: 76px; }
+}
+@media (max-width: 650px) {
+  .site-header-inner { height: 68px; }
+  .mobile-panel { top: 68px; inset-block-start: 68px; }
+  .container { width: calc(100% - 40px); }
+  .about-section, .visit-section { padding-block: 76px; }
+  .about-grid, .visit-grid { gap: 35px; }
+  .about-copy .micro-label, .visit-copy .micro-label {
+    font-size: 10px;
+    letter-spacing: .19em;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .about-copy .display-title, .visit-copy .display-title {
+    font-size: clamp(45px, 10.8vw, 65px);
+    line-height: 1.03;
+    letter-spacing: -.057em;
+    margin: 19px 0 24px;
+  }
+  .about-copy .section-description {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 530px;
+    margin: 0 0 17px;
+  }
+  .about-copy .inline-arrow { margin-top: 12px; }
+  .about-photo-composition {
+    height: clamp(315px, 102vw, 470px);
+  }
+  .about-photo-large { border-radius: 190px 190px 10px 10px; }
+  .about-photo-large img { object-position: center 62%; }
+
+  .visit-copy > p:not(.micro-label) {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .visit-status {
+    margin: 23px 0 25px;
+    padding-block: 22px;
+    gap: 13px;
+    line-height: 1.5;
+  }
+  .visit-status small { font-size: 13px; line-height: 1.5; }
+  .visit-copy .button { min-height: 54px; }
+  .visit-art {
+    height: clamp(295px, 91vw, 425px);
+    border-radius: 10px 175px 10px 10px;
+  }
+  .visit-art > img { object-position: 76% center; }
+  .category-tabs-wrap, .menu-2026-anchor-wrap { top: 68px; }
+  .subhero-layout { display: flex; flex-direction: column; }
+}
+@media (max-width: 390px) {
+  .container { width: calc(100% - 34px); }
+  .about-section, .visit-section { padding-block: 64px; }
+  .about-copy .display-title, .visit-copy .display-title {
+    font-size: clamp(43px, 11.5vw, 49px);
+    letter-spacing: -.055em;
+  }
+  .about-photo-composition { height: 345px; }
+  .visit-art { height: 315px; }
+}
