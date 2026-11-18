@@ -875,3 +875,107 @@ main,.site-footer,.site-header,.announcement {min-width:0;max-width:100%;}
   .about-photo-composition { height: 345px; }
   .visit-art { height: 315px; }
 }
+
+/* ===========================================================
+   CUSTOMER-SUPPLIED CUP LOADER + FIXED WHATSAPP CONTACT
+   / 19 NOV 2026 · Fully responsive, keyboard accessible.
+   =========================================================== */
+.coffee-transition {
+  position:fixed;
+  inset:0;
+  z-index:1500;
+  display:grid;
+  place-items:center;
+  padding:24px;
+  background:radial-gradient(ellipse at 50% 40%,#fff9ee 0%,#f8eddd 62%,#ead9c4 100%);
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .28s ease, visibility .28s ease;
+  isolation:isolate;
+}
+.coffee-transition--active {opacity:1;visibility:visible;pointer-events:auto;}
+.coffee-transition:before {
+  content:"";position:absolute;inset:18px;
+  border:1px solid rgba(22,75,60,.12);
+  pointer-events:none;
+}
+.coffee-transition__content {
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  width:100%;text-align:center;gap:0;
+}
+.coffee-transition__eyebrow {
+  font-size:10px;letter-spacing:.32em;font-weight:800;
+  color:var(--pine);margin-bottom:16px;
+}
+.coffee-transition__cup {width:clamp(142px,17vw,210px);position:relative;filter:drop-shadow(0 18px 20px rgba(47,37,28,.13));}
+.coffee-transition--active .coffee-transition__cup {animation:coffeeCupReveal .85s cubic-bezier(.2,.75,.2,1) both,coffeeCupFloat 1.9s ease-in-out .85s infinite;}
+.coffee-transition__cup img {display:block;width:100%;height:auto;object-fit:contain;}
+.coffee-transition__status {
+  font-size:10px;font-weight:800;color:var(--pine-deep);
+  letter-spacing:.19em;margin-top:20px;
+}
+.coffee-transition__progress {
+  width:min(160px,50vw);height:2px;margin-top:16px;
+  background:rgba(22,75,60,.17);overflow:hidden;border-radius:10px;
+}
+.coffee-transition__progress span {
+  display:block;width:40%;height:100%;background:#a26744;border-radius:10px;
+  animation:coffeeProgress .9s ease-in-out infinite alternate;
+}
+@keyframes coffeeCupReveal {
+  from{opacity:0;transform:translateY(22px) scale(.93)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes coffeeCupFloat {
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+@keyframes coffeeProgress {
+  from{transform:translateX(-95%)}
+  to{transform:translateX(240%)}
+}
+.whatsapp-float {
+  --wa-size:64px;
+  position:fixed;
+  right:max(25px,env(safe-area-inset-right,0px) + 19px);
+  bottom:max(25px,env(safe-area-inset-bottom,0px) + 19px);
+  z-index:160;
+  display:flex;align-items:center;justify-content:center;
+  width:var(--wa-size);height:var(--wa-size);
+  border-radius:50%;background:#25d366;color:#fff;
+  box-shadow:0 10px 28px rgba(8,67,42,.28),0 0 0 4px rgba(255,255,255,.9);
+  transition:transform .25s ease,background .25s ease,box-shadow .25s ease;
+}
+.whatsapp-float:hover,.whatsapp-float:focus-visible {
+  transform:translateY(-4px) scale(1.045);
+  background:#20ba5a;
+  box-shadow:0 16px 32px rgba(8,67,42,.32),0 0 0 4px rgba(255,255,255,.92);
+}
+.whatsapp-float__symbol {display:flex;align-items:center;justify-content:center;}
+.whatsapp-float__symbol svg {width:33px;height:33px;}
+.whatsapp-float__hint {
+  position:absolute;right:calc(100% + 15px);top:50%;
+  transform:translate(6px,-50%);
+  padding:10px 15px;border-radius:50px;background:var(--pine-deep);
+  color:#fff9ed;white-space:nowrap;font-size:12px;font-weight:750;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:transform .2s ease,opacity .2s ease,visibility .2s ease;
+}
+.whatsapp-float:hover .whatsapp-float__hint,.whatsapp-float:focus-visible .whatsapp-float__hint {
+  opacity:1;visibility:visible;transform:translate(0,-50%);
+}
+body.nav-open .whatsapp-float,body.intro-lock .whatsapp-float {opacity:0;pointer-events:none;}
+@media(max-width:650px) {
+  .whatsapp-float{--wa-size:56px;right:max(17px,env(safe-area-inset-right,0px) + 12px);bottom:max(18px,env(safe-area-inset-bottom,0px) + 12px);}
+  .whatsapp-float__symbol svg{width:30px;height:30px;}
+  .whatsapp-float__hint{display:none;}
+  .coffee-transition:before{inset:11px;}
+  .coffee-transition__eyebrow{font-size:9px;}
+  .coffee-transition__status{font-size:9px;letter-spacing:.15em;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .coffee-transition,.coffee-transition__cup,.coffee-transition__progress span,.whatsapp-float,.whatsapp-float__hint{animation:none!important;transition:none!important;}
+  .coffee-transition{display:none!important;}
+}
