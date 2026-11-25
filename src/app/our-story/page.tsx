@@ -1,12 +1,2 @@
-import type {Metadata} from 'next';
-import Link from 'next/link';
-import {ArrowUpRight} from 'lucide-react';
-import Reveal from '@/components/site/Reveal';
-import Photo from '@/components/site/Photo';
-export const metadata:Metadata={title:'Our Story',description:'Discover the everyday moments and thoughtful rituals behind Earth Been Coffee.'};
-export default function OurStory(){return <>
- <section className="subhero subhero-story"><div className="container subhero-layout"><div><p className="micro-label">02 / OUR STORY</p><h1>A little pause.<br/>A lot of <em>feeling.</em></h1><p>We think the beautiful things in life are often the smallest. A comforting cup. A smile. A reason to stay five minutes longer.</p></div><div className="subhero-photo"><Photo photo="coffeeMoment" alt="Coffee and pastries on a cosy café table"/></div></div></section>
- <section className="story-main section-pad"><div className="container story-main-grid"><Reveal><Photo className="story-main-img" photo="cafe" alt="Natural café interior with seating and counter"/></Reveal><Reveal className="story-main-copy" delay={90}><p className="micro-label">THE FEELING BEHIND THE CUP</p><h2 className="display-title">Coffee is just<br/>the <em>beginning.</em></h2><p>There is a little magic in the familiar. The ritual of ordering your favourite drink. The first warm sip. The moment you can finally slow down.</p><p>Earth Been Coffee is built around that feeling. We want every visit to feel like a little moment to look forward to, whatever your day looks like.</p><Link href="/menu" className="inline-arrow">EXPLORE OUR MENU <ArrowUpRight size={19}/></Link></Reveal></div></section>
- <section className="story-values"><div className="container"><p className="micro-label micro-label--light">WHAT MAKES THE MOMENT</p><h2>It&apos;s always the <em>little things.</em></h2><div className="values-grid"><div><span>01</span><h3>Make time</h3><p>For a slow morning, a catch-up, or a well-earned moment on your own.</p></div><div><span>02</span><h3>Feel at home</h3><p>A warm welcome and the comfort of something familiar.</p></div><div><span>03</span><h3>Savour it</h3><p>The everyday deserves to feel a little extraordinary.</p></div></div></div></section>
- <section className="story-end section-pad"><div className="container story-end-grid"><Reveal><div><p className="micro-label">HERE&apos;S TO THE NEXT GOOD CUP</p><h2 className="display-title">The best moments<br/>are <em>still brewing.</em></h2><Link className="button button-green" href="/find-us">COME SAY HELLO <ArrowUpRight size={18}/></Link></div></Reveal><Reveal delay={90}><Photo photo="pastry" alt="Freshly baked pastries ready for a coffee break"/></Reveal></div></section>
- </>}
+import {permanentRedirect} from 'next/navigation';
+export default function OurStory(){permanentRedirect('/#our-story');}

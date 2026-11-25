@@ -7,9 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint:types": "tsc --noEmit",
-    "photos:download": "node scripts/download-photos.mjs",
-    "prebuild": "npm run photos:download",
-    "predev": "npm run photos:download"
+    "photos:download": "node scripts/download-photos.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
