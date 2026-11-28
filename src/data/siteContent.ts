@@ -12,6 +12,6 @@ export const siteContent = {
     street: '69 Ridley Road',
     locality: 'Dalston, London E8 2NP',
     full: '69 Ridley Rd, London E8 2NP, United Kingdom',
-    mapsUrl: 'https://maps.app.goo.gl/eHbLsvawiYtNdzRM9?g_st=iw',
+    mapsUrl: 'https://maps.app.goo.gl/taDHxYSRs8XnTaHF6?g_st=ic',
   },
 } as const;
